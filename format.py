@@ -5,7 +5,9 @@ from shutil import copyfile
 srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Desktop\\toBeProcessed'
 # srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Music\\vol1'
 artistNames = ['gunadasa', 'kapuge' ,'clarance' ,'wijewardana', 'daddy' ,'damith' , 'asanka' , 
-'athula' ,'adhikari','samitha' , 'vijaya', 'kumarathunga','amaredeva' , 'umaria', 'chandana' ,'liyanarachchi' ]
+'athula' ,'adhikari','samitha' , 'vijaya', 'kumarathunga','amaredeva' , 'umaria', 'chandana' ,'liyanarachchi' , 'athma' ,
+'liyanage' , 'punsiri' , 'soysa', 'henry' , 'kaldera' , ' deepika'  ,'priyadharshani' , 'rodni' , 'warnakula'
+'kasun' , 'kalhara']
 otherJunkWords = ['wwwsindume', 'wwwtopsinhalamp3', 'www' , 'top' , 'sinhala' , 'mp3' , 'sindu' , ]
 
 folder = os.listdir(srcPath)
