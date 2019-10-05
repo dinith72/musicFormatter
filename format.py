@@ -7,7 +7,7 @@ srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Desktop\\toBeProcessed'
 artistNames = ['gunadasa', 'kapuge' ,'clarance' ,'wijewardana', 'daddy' ,'damith' , 'asanka' , 
 'athula' ,'adhikari','samitha' , 'vijaya', 'kumarathunga','amaredeva' , 'umaria', 'chandana' ,'liyanarachchi' , 'athma' ,
 'liyanage' , 'punsiri' , 'soysa', 'henry' , 'kaldera' , ' deepika'  ,'priyadharshani' , 'rodni' , 'warnakula'
-'kasun' , 'kalhara']
+'kasun' , 'kalhara' , 'dayarathna' , 'ranathunga' , 'deepika'  , 'priyadharshani']
 otherJunkWords = ['wwwsindume', 'wwwtopsinhalamp3', 'www' , 'top' , 'sinhala' , 'mp3' , 'sindu' , ]
 
 folder = os.listdir(srcPath)
@@ -17,7 +17,7 @@ for file in folder:
         fileName = file
         endPosition = len(fileName) - 4
         modifiedName = fileName[0:endPosition]
-        modifiedName = re.sub(r'[0-9,-/+{}=,.]','',modifiedName).lower()
+        modifiedName = re.sub(r'[0-9,-/+{}=,.!]','',modifiedName).lower()
         modifiedName = re.sub(r'[_]',' ',modifiedName)
 
         for name in artistNames:
