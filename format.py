@@ -3,11 +3,14 @@ import os
 from shutil import copyfile
 
 # srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Desktop\\toBeProcessed'
-srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Music\\toBeProcessed'
+#srcPath = 'C:\\Users\\Dinith Jaybaodhi\\Music\\toBeProcessed'
+destinationPath = 'C:\\Users\\Dinith Jayabodhi\\Music\\processed'
+srcPath = 'C:\\Users\\Dinith Jayabodhi\\Music\\toBeProcessed'
 artistNames = ['gunadasa', 'kapuge' ,'clarance' ,'wijewardana', 'daddy' ,'damith' , 'asanka' , 
-'athula' ,'adhikari','samitha' , 'vijaya', 'kumarathunga','amaredeva' , 'umaria', 'chandana' ,'liyanarachchi' , 'athma' ,
-'liyanage' , 'punsiri' , 'soysa', 'henry' , 'kaldera' , ' deepika'  ,'priyadharshani' , 'rodni' , 'warnakula'
-'kasun' , 'kalhara' , 'dayarathna' , 'ranathunga' , 'deepika'  , 'priyadharshani', 'namal' , 'udugama']
+                'athula' ,'adhikari','samitha' , 'vijaya', 'kumarathunga','amaredeva' , 'umaria', 'chandana' ,'liyanarachchi' ,
+               'athma' , 'liyanage' , 'punsiri' , 'soysa', 'henry' , 'kaldera' , ' deepika'  ,'priyadharshani' , 'rodni' , 'warnakula'
+                'kasun' , 'kalhara' , 'dayarathna' , 'ranathunga' , 'deepika'  , 'priyadharshani', 'namal' , 'udugama' , 'mallawarachchi' ,
+               'milton' , 'rookantha' , 'mudunkotuwa']
 otherJunkWords = ['wwwsindume', 'wwwtopsinhalamp3', 'www' , 'top' , 'sinhala' , 'mp3' , 'sindu' , ]
 
 folder = os.listdir(srcPath)
@@ -27,7 +30,7 @@ for file in folder:
             modifiedName = re.sub(word , '', modifiedName)
         
         modifiedName =  modifiedName.strip()
-        os.rename(srcPath + '\\' + file,'./processed/' + modifiedName+'.mp3')
+        os.rename(srcPath + '\\' + file, destinationPath+ '\\' + modifiedName+'.mp3')
         print(modifiedName)
 
 print('')
